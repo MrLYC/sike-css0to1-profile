@@ -141,3 +141,10 @@ body {
     margin: 0 0 20px; /* 设置标题外边距 */
 }
 ```
+
+### CSS属性排序
+1. 定位属性：`position`、`float`、`z-index`、`clear`
+2. 盒模型属性：`padding`、`margin`、`display`、`width`、`height`、`border`、
+3. 字体相关
+4. CSS2视觉相关：`background`
+5. CSS3属性：`border-radius`、`box-shadow`

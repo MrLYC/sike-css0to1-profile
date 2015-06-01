@@ -12,23 +12,27 @@ body {
 }
 
 .main-header {
-    background-image: url("/img/banner.jpg"); /* 设置背景图片 */
-    text-align: center;  /* 居中容器内容 */
+    margin-top: 70px; /* 设置头部容器外边距 */
+    padding-bottom: 1px; /* 防止和标题折叠外边距 */
+
     font-weight: 300; /* 设置字体粗细 */
     font-size: 20px; /* 设置字体大小 */
     font-family: 'Open Sans','helvetica',arial,sans-serif; /* 设置使用字体优先级 */
+
+    background-image: url("/img/banner.jpg"); /* 设置背景图片 */
+    text-align: center;  /* 居中容器内容 */
+
     text-shadow: 0 1px rgba(0,0,0,0.3); /* 设置字体阴影 */
-    margin-top: 70px; /* 设置头部容器外边距 */
-    padding-bottom: 1px; /* 防止和标题折叠外边距 */
 }
 
 .main-header__avatar {
-    box-shadow: 0 0 2px 1px rgba(0,0,0,0.2); /* 给头像加阴影 */
-    border-radius: 999px; /* 变成圆形边框 */
     width: 150px; /* 固定宽度 */
     border: 2px solid #ffffff; /* 添加白色边框 */
     margin-top: -70px; /* 使头像溢出头部容器 */
     margin-bottom: 10px; /* 设置头像下外边距 */
+
+    box-shadow: 0 0 2px 1px rgba(0,0,0,0.2); /* 给头像加阴影 */
+    border-radius: 999px; /* 变成圆形边框 */
 }
 
 .main-header h1 {
