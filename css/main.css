@@ -46,3 +46,13 @@ h1, h2, h3, h4, h5, h6 {
 .main-header h1 {
     margin: 0 0 20px; /* 设置标题外边距 */
 }
+
+nav > ul{
+    list-style: none; /* 对无序列表消除默认列表样式 */
+    padding-left: 0; /* 消除无序列表默认左边距 */
+    margin: 0; /* 消除无序列表默认外边距 */
+}
+
+nav > ul > li {
+    display: inline; /* 将li设置为行内元素 */
+}

@@ -162,3 +162,46 @@ h1, h2, h3, h4, h5, h6 {
     font-weight: 300; /* 设置字体粗细 */
 }
 ```
+
+### 语义化HTML标签
+HTML5定义了一套语义化标签：
+
+- `header`：头部模块
+- `nav`：导航模块
+- `article`：文章模块
+- `section`：文章节
+- `footer`：底部模块
+
+语义化HTML标签可以分离内容和页面样式，规范化页面结构。
+实现页面模块的基本步骤：
+
+1. 了解模块职能（定义语义）
+2. 组织HTML代码
+3. 观察模块布局需求
+4. 组织CSS代码
+
+### 设置导航栏
+```html
+<nav class="main-nav">
+    <ul>
+        <li><a href="#">Work</a></li>
+        <li><a href="#">Experience</a></li>
+        <li><a href="#">Photos</a></li>
+        <li><a href="#">Contact</a></li>
+    </ul>
+</nav>
+```
+
+消除列表默认样式：
+主要对无序列表的列表样式和左边距进行清除，同时由于`li`是块级元素，通过display设置为行级元素。
+```css
+nav > ul{
+    list-style: none; /* 对无序列表消除默认列表样式 */
+    padding-left: 0; /* 消除无序列表默认左边距 */
+    margin: 0; /* 消除无序列表默认外边距 */
+}
+
+nav > ul > li {
+    display: inline; /* 将li设置为行内元素 */
+}
+```
