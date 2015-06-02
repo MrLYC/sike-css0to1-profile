@@ -13,7 +13,7 @@ h1, h2, h3, h4, h5, h6 {
     font-weight: 300; /* 设置字体粗细 */
 }
 
-nav > ul{
+ul{
     list-style: none; /* 对无序列表消除默认列表样式 */
     padding-left: 0; /* 消除无序列表默认左边距 */
     margin: 0; /* 消除无序列表默认外边距 */
@@ -76,4 +76,28 @@ nav > ul > li {
 
 .main-nav ul li a:hover {
     text-decoration: underline; /* 悬停时出现下划线 */
+}
+
+.info-section {
+    background-color: #ffffff; /* 设置信息栏背景颜色 */
+    padding: 1px 10px; /* 间接清除信息栏上下子元素折叠出的外边距 */
+}
+
+.whatido__skill {
+    padding-top: 100px; /* 内容使用内边距给背景图留下位置 */
+
+    background-repeat: no-repeat; /* 背景图不重复 */
+    background-position: center top; /* 背景图居中居顶放置 */
+}
+
+.whatido__skill--code {
+    background-image: url(/img/skill-code.png); /* 设置code技能背景图 */
+}
+
+.whatido__skill--design {
+    background-image: url(/img/skill-design.png); /* 设置design技能背景图 */
+}
+
+.whatido__skill--product {
+    background-image: url(/img/skill-product.png); /* 设置product技能背景图 */
 }

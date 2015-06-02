@@ -195,7 +195,7 @@ HTML5定义了一套语义化标签：
 消除列表默认样式：
 主要对无序列表的列表样式和左边距进行清除，同时由于`li`是块级元素，通过display设置为行级元素。
 ```css
-nav > ul{
+ul{
     list-style: none; /* 对无序列表消除默认列表样式 */
     padding-left: 0; /* 消除无序列表默认左边距 */
     margin: 0; /* 消除无序列表默认外边距 */
@@ -234,5 +234,49 @@ nav > ul > li {
 ```css
 nav > ul > li {
     display: inline-block; /* 将项放置到一行 */
+}
+```
+
+### 准备 "What I Do" 小节
+挑战：
+
+1. 使用css显示下划线
+2. 使用css为技能添加图片
+
+因为与内容无关的装饰应该使用css来实现。
+
+#### 调节信息栏样式
+```css
+.info-section {
+    background-color: #ffffff; /* 设置信息栏背景颜色 */
+    padding: 1px 10px; /* 间接清除信息栏上下子元素折叠出的外边距 */
+}
+```
+
+#### 为每个技能配图
+以下元素会脱离文档流：
+
+1. 定位的元素：`fixed`、`absolute`
+2. 浮动元素：`float`
+3. CSS背景图
+
+对于能够事先得知空间大小的这里元素，可以使用`padding`来预留空间。
+```css
+.whatido__skill {
+    background-repeat: no-repeat; /* 背景图不重复 */
+    background-position: center top; /* 背景图居中居顶放置 */
+    padding-top: 100px; /* 内容使用内边距给背景图留下位置 */
+}
+
+.whatido__skill--code {
+    background-image: url(/img/skill-code.png); /* 设置code技能背景图 */
+}
+
+.whatido__skill--design {
+    background-image: url(/img/skill-design.png); /* 设置design技能背景图 */
+}
+
+.whatido__skill--product {
+    background-image: url(/img/skill-product.png); /* 设置product技能背景图 */
 }
 ```
