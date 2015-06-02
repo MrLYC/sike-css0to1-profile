@@ -205,3 +205,34 @@ nav > ul > li {
     display: inline; /* 将li设置为行内元素 */
 }
 ```
+
+其他样式：
+```css
+.main-nav {
+    background-color: #333; /* 导航背景颜色 */
+}
+
+.main-nav ul li {
+    margin: 15px 10px; /* 设置外边距 */
+}
+
+.main-nav ul li a {
+    color: #fff; /* 导航字体颜色为白色 */
+    font-size: 0.9rem; /* 设置字体大小 */
+    font-weight: 300;  /* 设置字体粗细 */
+    text-transform: uppercase; /* 内容变为大写 */
+    text-decoration: none; /* 去掉下划线 */
+}
+
+.main-nav ul li a:hover {
+    text-decoration: underline; /* 悬停时出现下划线 */
+}
+```
+
+注意此时`.main-nav ul li`设置的上下外边距不会生效，原因在于行元素不能设置垂直方向的距离，包括：`padding`、`margin`、`height`。
+若想垂直方向设置的距离属性生效，可以将其`display`设置为`inline-block`，`inline-block`会让其对外表现为行元素，对内表现为块元素：
+```css
+nav > ul > li {
+    display: inline-block; /* 将项放置到一行 */
+}
+```

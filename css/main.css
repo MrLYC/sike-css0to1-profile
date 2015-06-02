@@ -13,6 +13,16 @@ h1, h2, h3, h4, h5, h6 {
     font-weight: 300; /* 设置字体粗细 */
 }
 
+nav > ul{
+    list-style: none; /* 对无序列表消除默认列表样式 */
+    padding-left: 0; /* 消除无序列表默认左边距 */
+    margin: 0; /* 消除无序列表默认外边距 */
+}
+
+nav > ul > li {
+    display: inline-block; /* 将项放置到一行 */
+}
+
 .container {
     width: 960px; /* 推荐宽度 */
     margin: 50px auto; /* 设置上下外边距并居中 */
@@ -47,12 +57,23 @@ h1, h2, h3, h4, h5, h6 {
     margin: 0 0 20px; /* 设置标题外边距 */
 }
 
-nav > ul{
-    list-style: none; /* 对无序列表消除默认列表样式 */
-    padding-left: 0; /* 消除无序列表默认左边距 */
-    margin: 0; /* 消除无序列表默认外边距 */
+.main-nav {
+    background-color: #333; /* 导航背景颜色 */
+    text-align: center; /* 将导航内容居中 */
 }
 
-nav > ul > li {
-    display: inline; /* 将li设置为行内元素 */
+.main-nav ul li {
+    margin: 15px 10px; /* 设置外边距 */
+}
+
+.main-nav ul li a {
+    color: #fff; /* 导航字体颜色为白色 */
+    font-size: 0.9rem; /* 设置字体大小 */
+    font-weight: 300;  /* 设置字体粗细 */
+    text-transform: uppercase; /* 内容变为大写 */
+    text-decoration: none; /* 去掉下划线 */
+}
+
+.main-nav ul li a:hover {
+    text-decoration: underline; /* 悬停时出现下划线 */
 }
