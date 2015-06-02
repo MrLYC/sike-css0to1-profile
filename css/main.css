@@ -80,10 +80,46 @@ nav > ul > li {
 
 .info-section {
     background-color: #ffffff; /* 设置信息栏背景颜色 */
-    padding: 1px 10px; /* 间接清除信息栏上下子元素折叠出的外边距 */
+    padding: 30px 60px; /* 间接清除信息栏上下子元素折叠出的外边距 */
+}
+
+.info-section > header {
+    text-align: center; /* 信息栏标题居中 */
+    margin-bottom: 60px; /* 底部外边距留60像素 */
+}
+
+.info-section > header > h2 {
+    font-size: 28px; /* 设置文字大小 */
+    text-transform: uppercase; /* 转为大写 */
+    letter-spacing: 3px; /* 字符间距 */
+}
+
+.info-section > header > h2:after {
+    content: ""; /* 设置内容为空 */
+    margin: 5px auto 0; /* 与标题保持距离且居中 */
+    border-bottom: 2px solid black; /* 分割线 */
+    width: 50px; /* 设置宽度 */
+    display: block; /* 块级元素占一行 */
+}
+
+.info-section > header > h2:hover:after {
+    width: 150px; /* 设置鼠标悬空宽度 */
+
+    transition: width 0.5s ease-in-out; /* 宽度0.5秒生效 */
+}
+
+.info-section__description {
+    font-style: italic; /* 信息栏标题描述斜体 */
+}
+
+.whatido__skill-list {
+    overflow: hidden; /* 强制容器有足够的高度包围飘动元素 */
 }
 
 .whatido__skill {
+    float: left; /* 向左浮动成为一行 */
+    width: 33.33%; /* 三个元素平分一行空间 */
+
     padding-top: 100px; /* 内容使用内边距给背景图留下位置 */
 
     background-repeat: no-repeat; /* 背景图不重复 */

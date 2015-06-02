@@ -249,7 +249,7 @@ nav > ul > li {
 ```css
 .info-section {
     background-color: #ffffff; /* 设置信息栏背景颜色 */
-    padding: 1px 10px; /* 间接清除信息栏上下子元素折叠出的外边距 */
+    padding: 30px 60px; /* 间接清除信息栏上下子元素折叠出的外边距 */
 }
 ```
 
@@ -263,9 +263,10 @@ nav > ul > li {
 对于能够事先得知空间大小的这里元素，可以使用`padding`来预留空间。
 ```css
 .whatido__skill {
+    padding-top: 100px; /* 内容使用内边距给背景图留下位置 */
+
     background-repeat: no-repeat; /* 背景图不重复 */
     background-position: center top; /* 背景图居中居顶放置 */
-    padding-top: 100px; /* 内容使用内边距给背景图留下位置 */
 }
 
 .whatido__skill--code {
@@ -278,5 +279,55 @@ nav > ul > li {
 
 .whatido__skill--product {
     background-image: url(/img/skill-product.png); /* 设置product技能背景图 */
+}
+```
+
+#### 三个技能的布局
+使用`float`来布局三个技能：
+```css
+.whatido__skill-list {
+    overflow: hidden; /* 强制容器有足够的高度包围飘动元素 */
+}
+
+.whatido__skill {
+	...
+    float: left; /* 向左浮动成为一行 */
+    width: 33.33%; /* 三个元素平分一行空间 */
+}
+```
+
+- 设置`overflow: hidden`后，css会把容器扩大到足够的高度以包含浮动元素。
+- 也可以在最后的浮动元素后加个元素设置`clear: both`来撑开容器高度。
+- 这里不用`display: inline-block`原因在于这个场景对空白敏感。
+
+### 完善信息栏标题样式
+```css
+.info-section > header {
+    text-align: center; /* 信息栏标题居中 */
+    margin-bottom: 60px; /* 底部外边距留60像素 */
+}
+
+.info-section > header > h2 {
+    font-size: 28px; /* 设置文字大小 */
+    text-transform: uppercase; /* 转为大写 */
+    letter-spacing: 3px; /* 字符间距 */
+}
+
+.info-section > header > h2:after {
+    content: ""; /* 设置内容为空 */
+    margin: 5px auto 0; /* 与标题保持距离且居中 */
+    border-bottom: 2px solid black; /* 分割线 */
+    width: 50px; /* 设置宽度 */
+    display: block; /* 块级元素占一行 */
+}
+
+.info-section > header > h2:hover:after {
+    width: 150px; /* 设置鼠标悬空宽度 */
+
+    transition: width 0.5s ease-in-out; /* 宽度0.5秒生效 */
+}
+
+.info-section__description {
+    font-style: italic; /* 信息栏标题描述斜体 */
 }
 ```
