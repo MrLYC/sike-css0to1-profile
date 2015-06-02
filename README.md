@@ -218,7 +218,7 @@ nav > ul > li {
 
 .main-nav ul li a {
     color: #fff; /* 导航字体颜色为白色 */
-    font-size: 0.9rem; /* 设置字体大小 */
+    font-size: 0.9rem; /* 设置字体相对根元素的大小 */
     font-weight: 300;  /* 设置字体粗细 */
     text-transform: uppercase; /* 内容变为大写 */
     text-decoration: none; /* 去掉下划线 */
