@@ -148,3 +148,17 @@ body {
 3. 字体相关
 4. CSS2视觉相关：`background`
 5. CSS3属性：`border-radius`、`box-shadow`
+
+## 第二天
+### 设置全局字体风格
+```css
+body {
+    font-family: 'Open Sans','helvetica',arial,sans-serif; /* 设置使用字体优先级 */
+    color: #62686f; /* 默认字体颜色 */
+}
+
+h1, h2, h3, h4, h5, h6 {
+    color: #333;  /*标题字体颜色 */
+    font-weight: 300; /* 设置字体粗细 */
+}
+```

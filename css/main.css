@@ -1,8 +1,16 @@
 body {
+    font-family: 'Open Sans','helvetica',arial,sans-serif; /* 设置使用字体优先级 */
+    color: #62686f; /* 默认字体颜色 */
+
     background-image: url("/img/bg5.jpg"); /* 设置背景图片 */
     background-attachment: fixed; /* 背景固定不滚动 */
     background-size: cover; /* 背景图片填满整个屏幕 */
     background-position: center; /* 背景图片居中 */
+}
+
+h1, h2, h3, h4, h5, h6 {
+    color: #333;  /*标题字体颜色 */
+    font-weight: 300; /* 设置字体粗细 */
 }
 
 .container {
@@ -15,9 +23,9 @@ body {
     margin-top: 70px; /* 设置头部容器外边距 */
     padding-bottom: 1px; /* 防止和标题折叠外边距 */
 
+    font-family: 'Open Sans','helvetica',arial,sans-serif; /* 设置使用字体优先级 */
     font-weight: 300; /* 设置字体粗细 */
     font-size: 20px; /* 设置字体大小 */
-    font-family: 'Open Sans','helvetica',arial,sans-serif; /* 设置使用字体优先级 */
 
     background-image: url("/img/banner.jpg"); /* 设置背景图片 */
     text-align: center;  /* 居中容器内容 */
