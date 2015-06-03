@@ -21,14 +21,14 @@
 
 1. 元素固定，背景不做特殊处理
 2. 背景固定，元素不做特殊处理
-```css
-body {
-    background-image: url("/img/bg5.jpg"); /* 设置背景图片 */
-    background-attachment: fixed; /* 背景固定不滚动 */
-    background-size: cover; /* 背景图片填满整个屏幕 */
-    background-position: center; /* 背景图片居中 */
-}
-```
+    ```css
+    body {
+        background-image: url("/img/bg5.jpg"); /* 设置背景图片 */
+        background-attachment: fixed; /* 背景固定不滚动 */
+        background-size: cover; /* 背景图片填满整个屏幕 */
+        background-position: center; /* 背景图片居中 */
+    }
+    ```
 
 ### 居中外包围框
 #### 作用
@@ -84,63 +84,63 @@ body {
 ### 实现头部容器
 1. 语义化页面元素，使用`header`标签定义头部容器
 2. 居中头像和`h1`标题
-```css
-.main-header {
-    background-image: url("/img/banner.jpg"); /* 设置背景图片 */
-    text-align: center; ./* 居中容器内容 */
-}
-```
+    ```css
+    .main-header {
+        background-image: url("/img/banner.jpg"); /* 设置背景图片 */
+        text-align: center; ./* 居中容器内容 */
+    }
+    ```
 
 3. 在最后引入Open Sans字体
-```html
-<link href='http://fonts.useso.com/css?family=Open+Sans:400,300' rel='stylesheet' type='text/css'>
-```
+    ```html
+    <link href='http://fonts.useso.com/css?family=Open+Sans:400,300' rel='stylesheet' type='text/css'>
+    ```
 
 4. 更新`.main-header`字体属性
-```css
-.main-header {
-    background-image: url("/img/banner.jpg"); /* 设置背景图片 */
-    text-align: center;  /* 居中容器内容 */
-    font-weight: 300; /* 设置字体粗细 */
-    font-size: 20px; /* 设置字体大小 */
-    font-family: 'Open Sans','helvetica',arial,sans-serif; /* 设置使用字体优先级 */
-    text-shadow: 0 1px rgba(0,0,0,0.3); /* 设置字体阴影 */
-}
-```
+    ```css
+    .main-header {
+        background-image: url("/img/banner.jpg"); /* 设置背景图片 */
+        text-align: center;  /* 居中容器内容 */
+        font-weight: 300; /* 设置字体粗细 */
+        font-size: 20px; /* 设置字体大小 */
+        font-family: 'Open Sans','helvetica',arial,sans-serif; /* 设置使用字体优先级 */
+        text-shadow: 0 1px rgba(0,0,0,0.3); /* 设置字体阴影 */
+    }
+    ```
 
 5. 头像修饰
-```css
-.main-header__avatar {
-    box-shadow: 0 0 2px 1px rgba(0,0,0,0.2); /* 给头像加阴影 */
-    border-radius: 999px; /* 变成圆形边框 */
-    width: 150px;
-    border: 2px solid #ffffff;
-}
-```
+    ```css
+    .main-header__avatar {
+        box-shadow: 0 0 2px 1px rgba(0,0,0,0.2); /* 给头像加阴影 */
+        border-radius: 999px; /* 变成圆形边框 */
+        width: 150px;
+        border: 2px solid #ffffff;
+    }
+    ```
 
 6. 更新头部容器样式
-```css
-.container {
-	...
-    padding-top: 1px; /* 防止和子元素折叠外边距 */
-}
+    ```css
+    .container {
+        ...
+        padding-top: 1px; /* 防止和子元素折叠外边距 */
+    }
 
-.main-header {
-	...
-    margin-top: 70px; /* 设置头部容器外边距 */
-    padding-bottom: 1px; /* 防止和标题折叠外边距 */
-}
+    .main-header {
+        ...
+        margin-top: 70px; /* 设置头部容器外边距 */
+        padding-bottom: 1px; /* 防止和标题折叠外边距 */
+    }
 
-.main-header__avatar {
-	...
-    margin-top: -70px; /* 使头像溢出头部容器 */
-    margin-bottom: 10px; /* 设置头像下外边距 */
-}
+    .main-header__avatar {
+        ...
+        margin-top: -70px; /* 使头像溢出头部容器 */
+        margin-bottom: 10px; /* 设置头像下外边距 */
+    }
 
-.main-header h1 {
-    margin: 0 0 20px; /* 设置标题外边距 */
-}
-```
+    .main-header h1 {
+        margin: 0 0 20px; /* 设置标题外边距 */
+    }
+    ```
 
 ### CSS属性排序
 1. 定位属性：`position`、`float`、`z-index`、`clear`
