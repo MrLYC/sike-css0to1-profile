@@ -1,3 +1,13 @@
+@charset "UTF-8";
+
+html {
+     box-sizing: border-box; /* 对根设置为border-box模型 */
+ }
+
+*, *:before, *:after {
+    box-sizing: inherit; /* 子元素继承父元素盒子模型以达到全局统一 */
+}
+
 body {
     font-family: 'Open Sans','helvetica',arial,sans-serif; /* 设置使用字体优先级 */
     color: #62686f; /* 默认字体颜色 */
@@ -166,4 +176,18 @@ nav > ul > li {
     margin-top: 0; /* 清除顶部外边距 */
     font-size: 1rem; /* 设置字体大小 */
     font-weight: 600; /* 加粗 */
+}
+
+.photos__list {
+    overflow: hidden; /* 撑开容器高度 */
+}
+
+.photos__list > li {
+    float: left; /* 每一项向左浮动 */
+    padding: 10px; /* 设置周围内边距为10像素 */
+    width: 25%; /* 设置宽度为1/4个父容器宽以放置4个图片 */
+}
+
+.photos__list > li > img {
+    width: 100%; /* 设置图片填满父容器 */
 }

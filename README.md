@@ -376,3 +376,51 @@ nav > ul > li {
     font-weight: 600; /* 加粗 */
 }
 ```
+
+### 设置Photos
+#### CSS盒子模型
+传统盒子模型（content-box）真实尺寸：
+
+- real_height = height + padding + border
+- real_width = width + padding + border
+
+因此不能简单通过设置`width`和`height`来设计布局。
+
+#### 全局使用border-box简化布局
+可以通过设置全局的border-box模型来改变传统盒子模型。
+border-box模型的好处是高宽的值都包括`padding`和`border`，设置`height`和`width`即为实际值。
+设置全局border-box模型：
+```css
+html {
+    box-sizing: border-box; /* 对根设置为border-box模型 */
+}
+
+*, *:before, *:after {
+    box-sizing: inherit; /* 子元素继承父元素盒子模型以达到全局统一 */
+}
+```
+
+上面代码与下面等价：
+```css
+* {
+    box-sizing: border-box;
+}
+```
+但后者有个缺点是当需要使用content-box时需要对目标容器下的所有元素重新设置样式，而前者只需要对目标元素设置即可。
+
+#### 样式实现
+```css
+.photos__list {
+    overflow: hidden; /* 撑开容器高度 */
+}
+
+.photos__list > li {
+    float: left; /* 每一项向左浮动 */
+    padding: 10px; /* 设置周围内边距为10像素 */
+    width: 25%; /* 设置宽度为1/4个父容器宽以放置4个图片 */
+}
+
+.photos__list > li > img {
+    width: 100%; /* 设置图片填满父容器 */
+}
+```
