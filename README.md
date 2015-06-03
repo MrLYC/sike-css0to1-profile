@@ -331,3 +331,48 @@ nav > ul > li {
     font-style: italic; /* 信息栏标题描述斜体 */
 }
 ```
+
+## 第三天
+### Float实现图文左右布局
+目标：避免内容包围浮动元素
+设置图片浮动：
+```css
+.education-experience__list > li > img {
+    float: left; /* 向左浮动 */
+    width: 150px; /* 设置宽度 */
+}
+```
+
+`overflow: hidden`的作用：
+
+1. 让容器适配浮动子元素高度
+```css
+.education-experience__list > li {
+    overflow: hidden; /* 调节容器高度以包含浮动元素 */
+}
+```
+2. 让浮动元素后的容器成为[block formatting context](http://www.w3.org/TR/CSS21/visuren.html#block-formatting)而不被浮动元素覆盖
+```css
+.education-experience__list__description {
+    overflow: hidden; /* 禁止内容包围浮动元素 */
+}
+```
+
+设置装饰性样式：
+```css
+.education-experience__list__description {
+    overflow: hidden; /* 禁止内容包围浮动元素 */
+}
+
+.education-experience__list__description > h3 {
+    font-size: 1.5rem; /* 增大字体 */
+    letter-spacing: 2px; /* 扩大字符间距 */
+    margin-bottom: 0; /* 清除底部外边距 */
+}
+
+.education-experience__title {
+    margin-top: 0; /* 清除顶部外边距 */
+    font-size: 1rem; /* 设置字体大小 */
+    font-weight: 600; /* 加粗 */
+}
+```

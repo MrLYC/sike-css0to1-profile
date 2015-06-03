@@ -137,3 +137,29 @@ nav > ul > li {
 .whatido__skill--product {
     background-image: url(/img/skill-product.png); /* 设置product技能背景图 */
 }
+
+.education-experience__list > li {
+    overflow: hidden; /* 调节容器高度以包含浮动元素 */
+}
+
+.education-experience__list > li > img {
+    float: left; /* 向左浮动 */
+    width: 150px; /* 设置宽度 */
+    margin: 20px 30px; /* 图片周围留有空白 */
+}
+
+.education-experience__list__description {
+    overflow: hidden; /* 禁止内容包围浮动元素 */
+}
+
+.education-experience__list__description > h3 {
+    font-size: 1.5rem; /* 增大字体 */
+    letter-spacing: 2px; /* 扩大字符间距 */
+    margin-bottom: 0; /* 清除底部外边距 */
+}
+
+.education-experience__title {
+    margin-top: 0; /* 清除顶部外边距 */
+    font-size: 1rem; /* 设置字体大小 */
+    font-weight: 600; /* 加粗 */
+}
