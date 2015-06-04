@@ -424,3 +424,19 @@ html {
     width: 100%; /* 设置图片填满父容器 */
 }
 ```
+
+## 第四天
+### 实现 Get In Touch
+参照Photos实现即可：
+```css
+.get-in-touch__list {
+    overflow: hidden; /* 为了留有足够高度容纳浮动元素 */
+}
+
+.get-in-touch__list > li {
+    float: left; /* 向左浮动 */
+    width: 25%; /* 一行放置4个元素 */
+    padding: 10px; /* 设置间隔 */
+    text-align: center; /* 文字居中 */
+}
+```
