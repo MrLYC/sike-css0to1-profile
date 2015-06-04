@@ -203,4 +203,43 @@ nav > ul > li {
     text-align: center; /* 文字居中 */
 }
 
+.contact input, .contact textarea {
+    border: 1px solid #ccc; /* 设置边框 */
+    border-radius: 4px; /* 设置边框圆角半径 */
+    padding: 8px; /* 设置输入框内边距 */
+    margin-bottom: 15px; /* 设置底部边距 */
+    width: 100%; /* 宽度填满父容器 */
+}
 
+.contact button {
+    border: none; /* 去掉默认边框 */
+    border-radius: 9999px; /* 边框圆角 */
+    padding: 6px; /* 设置按钮内边距 */
+    width: 100%; /* 宽度填满父容器 */
+
+    background: #ffd524; /* 底色黄色 */
+
+    cursor: pointer; /* 鼠标样式为指针 */
+    text-shadow: 0 1px 1px rgba(0, 0, 0, 0.2); /* 设置文字阴影为20% */
+    color: #ffffff; /* 字体颜色为白色 */
+    box-shadow: 0 3px 0 #daae1d; /* 盒子模型阴影 */
+}
+
+.contact form {
+    width: 40%; /* 表单容器宽度 */
+    margin: 0 auto 50px; /* 块级元素居中 */
+}
+
+.input-area {
+    position: relative; /* 父容器使用相对定位 */
+}
+
+.input-area > label {
+    position: absolute; /* 使用绝对定位 */
+    top: 0; /* 与父容器顶部靠齐 */
+    left: -100%; /* 向左偏移一个父容器宽度 */
+    width: 100%; /* 设置宽度为父容器宽度与上面匹配 */
+    padding: 8px; /* 与输入框有相同的内边距 */
+
+    text-align: right; /* 文字向右对齐 */
+}

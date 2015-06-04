@@ -440,3 +440,112 @@ html {
     text-align: center; /* 文字居中 */
 }
 ```
+
+### Leave A Message表单布局
+特点：
+
+- 输入栏和提交按钮居中
+- 输入栏标签在表单容器左侧，向右靠齐
+
+装饰性样式：
+```css
+.contact input, .contact textarea {
+    border: 1px solid #ccc; /* 设置边框 */
+    border-radius: 4px; /* 设置边框圆角半径 */
+}
+
+.contact button {
+    border: none; /* 去掉默认边框 */
+    border-radius: 9999px; /* 边框圆角 */
+
+    background: #ffd524; /* 底色黄色 */
+
+    cursor: pointer; /* 鼠标样式为指针 */
+    text-shadow: 0 1px 1px rgba(0, 0, 0, 0.2); /* 设置文字阴影为20% */
+    color: #ffffff; /* 字体颜色为白色 */
+    box-shadow: 0 3px 0 #daae1d; /* 盒子模型阴影 */
+}
+```
+
+布局性样式：
+```css
+.contact input, .contact textarea {
+    ...
+    padding: 8px; /* 设置输入框内边距 */
+    margin-bottom: 15px; /* 设置底部边距 */
+    width: 100%; /* 宽度填满父容器 */
+}
+
+.contact button {
+    ...
+    padding: 6px; /* 设置按钮内边距 */
+    width: 100%; /* 宽度填满父容器 */
+}
+
+.contact form {
+    width: 40%; /* 表单容器宽度 */
+    margin: 0 auto 50px; /* 块级元素居中 */
+}
+```
+
+#### 子元素移到容器外与边靠齐
+使用场景：
+
+1. 有一个主要组件和一个附属组件
+2. 在文档流中主要以主要组件布局
+3. 附属组件位置相对主要组件布局
+
+如：
+
+- 输入栏和其标签
+- 按钮和其菜单
+- 组件和其提示框
+- 容器内位置固定的组件（相册上一页和下一页）
+
+注意：
+
+- 父容器的定位不能是默认的`static`
+- `top: 100%`和`left: 100%`指的是父容器的高度和宽度
+- 绝对定位的元素需要设定宽度
+
+#### 使用绝对定位布局文本框标签
+
+1. 为每个输入框使用容器包裹：
+    ```html
+    <div class="input-area">
+        <input name="name" id="name" type="text" />
+        <label for="name">Name</label>
+    </div>
+
+    <div class="input-area">
+        <label for="email">Email</label>
+        <input name="email" id="email" type="email" />
+    </div>
+
+    <div class="input-area">
+        <label for="message">Message</label>
+        <textarea name="message" id="message"></textarea>
+    </div>
+	```
+2. 父容器使用相对定位：
+	```css
+    .input-area {
+        position: relative; /* 父容器使用相对定位 */
+    }
+	```
+3. 设置标签布局：
+    ```css
+    .input-area {
+        position: relative; /* 父容器使用相对定位 */
+    }
+
+    .input-area > label {
+        position: absolute; /* 使用绝对定位 */
+        top: 0; /* 与父容器顶部靠齐 */
+        left: -100%; /* 向左偏移一个父容器宽度 */
+        width: 100%; /* 设置宽度为父容器宽度与上面匹配 */
+        padding: 8px; /* 与输入框有相同的内边距 */
+
+        text-align: right; /* 文字向右对齐 */
+    }
+    ```
