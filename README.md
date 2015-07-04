@@ -21,6 +21,7 @@
 
 1. 元素固定，背景不做特殊处理
 2. 背景固定，元素不做特殊处理
+
     ```css
     body {
         background-image: url("/img/bg5.jpg"); /* 设置背景图片 */
